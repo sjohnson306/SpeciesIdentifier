@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpeciesIdentifier" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T0C-XB-OHa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background Blue" translatesAutoresizingMaskIntoConstraints="NO" id="LAC-ed-MZE">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identifying a Bird's Species" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVS-cw-GKU">
+                                <rect key="frame" x="25" y="30" width="325" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mpj-Fd-9FG">
+                                <rect key="frame" x="15" y="620" width="89" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Instructions">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="instructionsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CvH-vO-Lgw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPM-oV-J88">
+                                <rect key="frame" x="280" y="620" width="80" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="About App">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="aboutTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Stb-OZ-RyS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQz-43-zua">
+                                <rect key="frame" x="114.5" y="566" width="146" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="dFJ-4q-TQl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Select Image">
+                                    <color key="titleColor" red="0.94509803921568625" green="0.92156862745098034" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectImageTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="9W2-Cu-OGD"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="birdcollage" translatesAutoresizingMaskIntoConstraints="NO" id="nS6-XE-9ud">
+                                <rect key="frame" x="15" y="76.5" width="345" height="306.5"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Species guesses will be displayed here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dp4-w9-bEi">
+                                <rect key="frame" x="15" y="403" width="345" height="153"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="dn1-HZ-2EL" firstAttribute="bottom" secondItem="Mpj-Fd-9FG" secondAttribute="bottom" constant="15" id="09n-ck-Qyp"/>
+                            <constraint firstItem="dn1-HZ-2EL" firstAttribute="bottom" secondItem="LAC-ed-MZE" secondAttribute="bottom" id="8xc-sb-NxZ"/>
+                            <constraint firstItem="nS6-XE-9ud" firstAttribute="top" secondItem="TVS-cw-GKU" secondAttribute="bottom" constant="20" id="Cfq-D8-GW5"/>
+                            <constraint firstItem="Mpj-Fd-9FG" firstAttribute="leading" secondItem="dn1-HZ-2EL" secondAttribute="leading" constant="15" id="FJM-yD-Jxz"/>
+                            <constraint firstItem="Dp4-w9-bEi" firstAttribute="width" secondItem="nS6-XE-9ud" secondAttribute="width" id="MRC-S6-Mff"/>
+                            <constraint firstItem="LAC-ed-MZE" firstAttribute="top" secondItem="dn1-HZ-2EL" secondAttribute="top" id="NeW-mh-tkY"/>
+                            <constraint firstItem="bQz-43-zua" firstAttribute="centerX" secondItem="T0C-XB-OHa" secondAttribute="centerX" id="Ps6-wf-Esg"/>
+                            <constraint firstItem="dn1-HZ-2EL" firstAttribute="bottom" secondItem="vPM-oV-J88" secondAttribute="bottom" constant="15" id="XRj-cv-b3Z"/>
+                            <constraint firstItem="dn1-HZ-2EL" firstAttribute="trailing" secondItem="LAC-ed-MZE" secondAttribute="trailing" id="Yjw-Vg-5sD"/>
+                            <constraint firstItem="TVS-cw-GKU" firstAttribute="leading" secondItem="dn1-HZ-2EL" secondAttribute="leading" constant="25" id="Yn7-8O-zGa"/>
+                            <constraint firstItem="nS6-XE-9ud" firstAttribute="leading" secondItem="dn1-HZ-2EL" secondAttribute="leading" constant="15" id="Zpw-iW-os7"/>
+                            <constraint firstItem="Dp4-w9-bEi" firstAttribute="top" secondItem="nS6-XE-9ud" secondAttribute="bottom" constant="20" id="bwW-JQ-Itm"/>
+                            <constraint firstItem="TVS-cw-GKU" firstAttribute="top" secondItem="dn1-HZ-2EL" secondAttribute="top" constant="10" id="gyo-pZ-ErG"/>
+                            <constraint firstItem="dn1-HZ-2EL" firstAttribute="bottom" secondItem="bQz-43-zua" secondAttribute="bottom" constant="60" id="hVF-PF-T2u"/>
+                            <constraint firstItem="dn1-HZ-2EL" firstAttribute="trailing" secondItem="nS6-XE-9ud" secondAttribute="trailing" constant="15" id="ilS-z5-Qdm"/>
+                            <constraint firstItem="nS6-XE-9ud" firstAttribute="centerX" secondItem="T0C-XB-OHa" secondAttribute="centerX" id="ivj-Eb-n2o"/>
+                            <constraint firstItem="LAC-ed-MZE" firstAttribute="leading" secondItem="dn1-HZ-2EL" secondAttribute="leading" id="kHN-xB-tMv"/>
+                            <constraint firstItem="Dp4-w9-bEi" firstAttribute="centerX" secondItem="T0C-XB-OHa" secondAttribute="centerX" id="lmy-98-EOT"/>
+                            <constraint firstItem="dn1-HZ-2EL" firstAttribute="trailing" secondItem="vPM-oV-J88" secondAttribute="trailing" constant="15" id="pNA-pc-dVe"/>
+                            <constraint firstItem="bQz-43-zua" firstAttribute="top" secondItem="Dp4-w9-bEi" secondAttribute="bottom" constant="10" id="tTS-DF-zor"/>
+                            <constraint firstItem="dn1-HZ-2EL" firstAttribute="trailing" secondItem="TVS-cw-GKU" secondAttribute="trailing" constant="25" id="xtt-m6-lRe"/>
+                            <constraint firstItem="vPM-oV-J88" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Mpj-Fd-9FG" secondAttribute="trailing" constant="8" symbolic="YES" id="yEo-Fi-0kM"/>
+                            <constraint firstItem="Dp4-w9-bEi" firstAttribute="height" secondItem="nS6-XE-9ud" secondAttribute="height" multiplier="1/2" id="zEQ-u8-D9D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dn1-HZ-2EL"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="nS6-XE-9ud" id="U7Q-Zf-BzH"/>
+                        <outlet property="labelDescription" destination="Dp4-w9-bEi" id="itz-Fo-RNN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background Blue" width="1300" height="2700"/>
+        <image name="birdcollage" width="3111" height="2831"/>
+    </resources>
+</document>
